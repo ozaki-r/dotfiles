@@ -57,6 +57,18 @@ PROMPT='
 [%j]	> %b'
 RPROMPT='%1(v|%F{green}%1v%f|)'
 ########################################
+export PATH="$HOME/bin:$PATH"
+if [ -d /usr/pkg/bin ]; then
+	export PATH="$PATH:/usr/pkg/bin"
+fi
+if [ -d /var/lib/snapd/snap/bin ]; then
+	export PATH="$PATH:/var/lib/snapd/snap/bin"
+fi
+if [ $(uname) = 'NetBSD' ]; then
+	export PATH="$PATH:/sbin:/usr/sbin"
+fi
+
+########################################
 
 if $(/bin/ls --color >/dev/null 2>&1); then
 	alias ls='/bin/ls -Fs --color=auto'
@@ -144,9 +156,7 @@ export PAGER=less
 export PRINTER=lp
 export LESS=-RMs
 export SVN_EDITOR="vim"
-export PATH="$HOME/bin:$PATH"
 if [ $(uname) = 'NetBSD' ]; then
-	export PATH="$PATH:/sbin:/usr/sbin:/usr/pkg/bin"
 	export MANPATH="/usr/share/man:/usr/pkg/man"
 	export CURL_CA_BUNDLE="/etc/openssl/cert.pem"
 fi
