@@ -1,6 +1,6 @@
 [core]                                                                                                                                                        
 #	pager = delta --plus-color="#005500" --minus-color="#340001" --theme='Monokai Extended'                                                               
-	pager = delta --dark  --theme='zenburn'                                                                                                               
+#	pager = delta --dark  --theme='zenburn'
 [color]
 	ui = auto
 [alias]
@@ -37,6 +37,6 @@
 #	diff = diff-highlight | less
 [interactive]
 #	diffFilter = diff-highlight
-	diffFilter = delta --color-only
+#	diffFilter = delta --color-only
 [blame]                                                                                                                                                       
 	date = human                                                                                                                                          
