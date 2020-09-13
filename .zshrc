@@ -199,6 +199,10 @@ if [ -f $HOME/.cargo/env ]; then
 	source $HOME/.cargo/env
 fi
 
+if [ -d "$HOME/.local/bin" ]; then
+        export PATH="$HOME/.local/bin:$PATH"
+fi
+
 if [ -f $HOME/.zsh.google-cloud-sdk.inc ]; then
 	source $HOME/.zsh.google-cloud-sdk.inc
 fi
