@@ -1,6 +1,9 @@
 [core]                                                                                                                                                        
 #	pager = delta --plus-color="#005500" --minus-color="#340001" --theme='Monokai Extended'                                                               
 #	pager = delta --dark  --theme='zenburn'
+[user]
+	name = Ryota Ozaki
+	email = ozaki.ryota@gmail.com
 [color]
 	ui = auto
 [alias]
