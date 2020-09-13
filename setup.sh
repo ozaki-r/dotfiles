@@ -17,5 +17,7 @@ for dir in .tmux; do
 	fi
 done
 
+mkdir -p ~/bin
+
 mkdir -p ~/.vim/colors
 curl https://raw.githubusercontent.com/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim > ~/.vim/colors/atom-dark-256.vim
