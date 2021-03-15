@@ -29,6 +29,12 @@
 	showlog = show --pretty=format:"%B" --no-patch
 	shows = show --stat
 	diffs = diff --stat
+	res-theirs = "!git checkout --theirs $1 && git add $1"
+	res-ours = "!git checkout --ours $1 && git add $1"
+	fixup = "!f(){ git reset --soft HEAD~${1} && git commit --amend -C HEAD; };f"
+	sw = switch
+	re = restore
+	push-f = push --force-with-lease
 [merge]
 	ff = false
 [diff]
