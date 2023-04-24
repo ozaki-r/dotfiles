@@ -211,5 +211,9 @@ if $(which kubectl >/dev/null 2>&1); then
 	source <(kubectl completion zsh)
 fi
 
+if [ -S "$XDG_RUNTIME_DIR/ssh-agent.socket" ]; then
+	export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+fi
+
 autoload -U compinit
 compinit
