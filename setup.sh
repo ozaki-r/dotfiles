@@ -17,6 +17,16 @@ for dir in .tmux; do
 	fi
 done
 
+# fish
+mkdir -p $HOME/.config/fish/functions/
+file=".config/fish/functions/fish_prompt.fish"
+target=$HOME/$file
+if [ -f $target ]; then
+	echo "warning: $target already exists"
+else
+	cp $file $target
+fi
+
 mkdir -p ~/bin
 
 mkdir -p ~/.vim/colors
