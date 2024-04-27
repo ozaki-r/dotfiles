@@ -42,7 +42,7 @@ Description=SSH key agent
 [Service]
 Type=forking
 Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
-ExecStart=/usr/bin/ssh-agent -a $SSH_AUTH_SOCK
+ExecStart=/usr/bin/ssh-agent -a \$SSH_AUTH_SOCK
 [Install]
 WantedBy=default.target
 EOF
