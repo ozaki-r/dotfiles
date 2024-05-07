@@ -1,0 +1,3 @@
+escape ^z^z
+hardstatus alwayslastline "%w"
+defscrollback 10000
