@@ -30,6 +30,7 @@ for file in $base/config.fish $base/functions/fish_prompt.fish; do
 done
 
 mkdir -p ~/bin
+mkdir -p ~/tmp
 
 mkdir -p ~/.vim/colors
 curl https://raw.githubusercontent.com/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim > ~/.vim/colors/atom-dark-256.vim
