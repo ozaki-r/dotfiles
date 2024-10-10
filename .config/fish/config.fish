@@ -3,6 +3,9 @@ if status is-interactive
 end
 
 set -U fish_hisotry 100000
+function save_history --on-event fish_preexec
+    history merge
+end
 
 #set --export http_proxy $url
 #set --export https_proxy $url
